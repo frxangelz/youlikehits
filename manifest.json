@@ -1,0 +1,37 @@
+{
+  "name": "YouLikeHits : by freeangel",
+  "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Macro to gain youlikehits point",
+  "homepage_url": "http://frxangelz.blogspot.com",
+  "default_locale": "en",
+  "browser_action": {
+    "default_title": "Youlikehits bot",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "background",
+	"storage" 
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+	      "jquery.min.js",
+        "inject.js",
+		"tiktok.js",
+		"instagram.js",
+		"twitter.js",
+		"sc.js",
+		"yt.js" 
+      ]
+    }
+  ]
+}

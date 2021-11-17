@@ -1,0 +1,107 @@
+<img src="ajax-loader.gif">
+
+list
+<a href="javascript:void(0);" onclick="likepage(114702,'CV2qzGYMjIp');" class="followbutton">Like</a>
+
+like
+<a href="javascript:void(0);" onclick="window.open('http://href.li/?http://instagram.com/p/CV2qzGYMjIp','FB','status=0,toolbar=0,width=1000,height=600,resizable=0,menubar=0,location=0,directories=0');showit();" class="likebutton">Like</a>
+
+confirm
+<button onclick="checkDoesLike();">I've Liked this Photo!</button>
+
+skip
+<a href="javascript:void(0);" onclick="FBSkip('114702');">Skip this Photo</a>
+
+tiktok follow
+// chart
+<div class="followp" id="follow53852">
+
+// follow
+<area shape="rect" coords="0,1,72,25" href="javascript:void(0);" onclick="window.open('tiktokrender.php?uname=kanik1637','TikTok','status=0,toolbar=0,width=1000,height=640,resizable=0,menubar=0,location=0,directories=0');" alt="" title="">
+
+confirm
+<area shape="rect" coords="0,29,72,53" href="javascript:void(0);" onclick="followuser('53852','kanik1637','2d40388a5d56439b01818a2edc0adaf4');" alt="" title="">
+
+skip
+<a href="javascript:void(0);" onclick="skipuser('53852','kanik1637');remove('53852');" style="color: #666666;font-size:0.9em;">skip</a>
+
+youtube
+sub
+<ytd-subscribe-button-renderer class="style-scope ytd-c4-tabbed-header-renderer" use-keyboard-focused=""><!--css-build:shady--><tp-yt-paper-button noink="" class="style-scope ytd-subscribe-button-renderer" role="button" tabindex="0" animated="" elevation="0" aria-disabled="false" aria-label="Subscribe to Paula Angela."><!--css-build:shady-->
+  <yt-formatted-string class="style-scope ytd-subscribe-button-renderer">Subscribe</yt-formatted-string>
+<paper-ripple class="style-scope tp-yt-paper-button"><!--css-build:shady-->
+    
+
+    <div id="background" class="style-scope paper-ripple"></div>
+    <div id="waves" class="style-scope paper-ripple"></div>
+</paper-ripple></tp-yt-paper-button>
+<div id="notification-preference-toggle-button" class="style-scope ytd-subscribe-button-renderer" hidden=""></div>
+<div id="notification-preference-button" class="style-scope ytd-subscribe-button-renderer" hidden=""><ytd-subscription-notification-toggle-button-renderer class="style-scope ytd-subscribe-button-renderer style-text size-default" use-keyboard-focused="" button-renderer="true" is-icon-button="" has-no-text=""><a class="yt-simple-endpoint style-scope ytd-subscription-notification-toggle-button-renderer" tabindex="-1"><yt-icon-button id="button" class="style-scope ytd-subscription-notification-toggle-button-renderer style-text size-default" touch-feedback=""><!--css-build:shady--><button id="button" class="style-scope yt-icon-button" aria-label="Current setting is personalized notifications. Tap to change your notification setting for Paula Angela"><yt-icon class="style-scope ytd-subscription-notification-toggle-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M10,20h4c0,1.1-0.9,2-2,2S10,21.1,10,20z M20,17.35V19H4v-1.65l2-1.88v-5.15c0-2.92,1.56-5.22,4-5.98V3.96 c0-1.42,1.49-2.5,2.99-1.76C13.64,2.52,14,3.23,14,3.96l0,0.39c2.44,0.75,4,3.06,4,5.98v5.15L20,17.35z M19,17.77l-2-1.88v-5.47 c0-2.47-1.19-4.36-3.13-5.1c-1.26-0.53-2.64-0.5-3.84,0.03C8.15,6.11,7,7.99,7,10.42v5.47l-2,1.88V18h14V17.77z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon></button><yt-interaction id="interaction" class="circular style-scope yt-icon-button"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction></yt-icon-button></a></ytd-subscription-notification-toggle-button-renderer></div>
+</ytd-subscribe-button-renderer>
+
+var btn = document.getElementsByTagName('ytd-subscribe-button-renderer');
+var btn = document.querySelector('div#subscribe-button');
+btn.click();
+
+var simulateMouseEvent = function(element, eventName, coordX, coordY) {
+	element.dispatchEvent(new MouseEvent(eventName, {
+	  view: window,
+	  bubbles: true,
+	  cancelable: true,
+	  clientX: coordX,
+	  clientY: coordY,
+	  button: 0
+	}));
+  };
+  
+  function click(btn){
+	  var box = btn.getBoundingClientRect(),
+		  coordX = box.left + (box.right - box.left) / 2,
+		  coordY = box.top + (box.bottom - box.top) / 2;
+		  
+	  btn.focus();
+	  simulateMouseEvent(btn,"mousemove",coordX,coordY);
+	  simulateMouseEvent(btn,"mousedown",coordX,coordY);
+	  setTimeout(function(){
+		  simulateMouseEvent(btn,"click",coordX,coordY);
+		  simulateMouseEvent(btn,"mouseup",coordX,coordY);
+	  },200);
+  }
+
+function simulateMouseOver(myTarget) {
+  var event = new MouseEvent('mouseover', {
+    'view': window,
+    'bubbles': true,
+    'cancelable': true
+  });
+  var canceled = !myTarget.dispatchEvent(event);
+  if (canceled) {
+    //console.log("canceled");
+  } else {
+    //console.log("not canceled");
+  }
+}
+var btn = document.querySelector('div#subscribe-button');
+simulateMouseOver(btn);
+
+
+var buttons = document.querySelectorAll('.ytd-subscribe-button-renderer');
+for(var i=0; i<buttons.length; i++){
+ var s = buttons[i].textContent;
+ if (s=='Subscribe'){
+	buttons[i].click();
+	 console.log(s);
+	break;
+ }
+}
+
+
+<button id="button" class="style-scope yt-icon-button" aria-label="like this video along with 245 other people" aria-pressed="false"><yt-icon class="style-scope ytd-toggle-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon></button>
+
+btn = document.querySelector('button[aria-label^="like"');
+btn.click();
+
+// soundcloud
+<button type="button" class="sc-button-follow sc-button sc-button-medium sc-button-responsive sc-button-cta sc-button-primary" tabindex="0" title="Follow" aria-label="Follow">Follow</button>
+
+<button type="button" class="sc-button-like sc-button-secondary sc-button sc-button-medium sc-button-responsive" aria-describedby="tooltip-279" tabindex="0" title="Like" aria-label="Like">Like</button>
